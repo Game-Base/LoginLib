@@ -62,12 +62,6 @@ module qmr {
 			let contentObj: any = JSON.parse(zipObj.asText());
 			if (greeter)
 			{
-				//提审版武将表特殊处理
-				if(PlatformConfig.isShildTSV){
-					if(fileName == "Hero" && TSHelper){
-						TSHelper.instance.handleHeroCfgJson(contentObj);
-					}
-				}
 				contentObj.forEach(element =>
 				{
 					let cfg: any = new greeter(element);//实例化类

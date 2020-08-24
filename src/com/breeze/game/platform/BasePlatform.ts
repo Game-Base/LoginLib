@@ -51,7 +51,7 @@ module qmr {
 		/**登陆接口*/
 		protected abstract async login(): Promise<any>;
 		/**sdk支付*/
-		protected abstract async pay(payInfo: RechargeCfg): Promise<any>;
+		protected abstract async pay(payInfo: any): Promise<any>;
 		/**该平台是否拥有清理缓存接口 */
 		public abstract canClearResCache: boolean;
 		/**第一个加载背景是否移除 */
@@ -76,7 +76,7 @@ module qmr {
 		}
 
 		/**请求支付 *///不通用的平台在子类重写，基类函数不可修改
-		public reqPay(payInfo: RechargeCfg) {
+		public reqPay(payInfo: any) {
 		}
 		/**
 		 * 设置加载进度

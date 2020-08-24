@@ -2272,12 +2272,6 @@ var qmr;
             }
             var contentObj = JSON.parse(zipObj.asText());
             if (greeter) {
-                //提审版武将表特殊处理
-                if (qmr.PlatformConfig.isShildTSV) {
-                    if (fileName == "Hero" && qmr.TSHelper) {
-                        qmr.TSHelper.instance.handleHeroCfgJson(contentObj);
-                    }
-                }
                 contentObj.forEach(function (element) {
                     var cfg = new greeter(element); //实例化类
                     if (cfg.key) {
