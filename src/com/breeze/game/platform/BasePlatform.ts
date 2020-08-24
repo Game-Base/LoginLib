@@ -56,17 +56,13 @@ module qmr {
 		public abstract canClearResCache: boolean;
 		/**第一个加载背景是否移除 */
 		protected firstLoadBgHide: boolean;
+		/**是否可以缩放窗口 */
+		public canResizeStage:boolean = true;
 
 		public constructor() {
 			this.initGetOption();
 		}
 		
-		/**该平台是否拥有重置窗口大小的能力 */
-		public get canResizeStage(): boolean
-		{
-			return true;
-		}
-
 		/**请求登录 *///基类函数不可修改
 		public async reqLogin() {
 			this.setLoadingStatus("验证账号...");

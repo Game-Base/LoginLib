@@ -1,10 +1,6 @@
 
 module qmr
 {
-	/**
- 	* 平台工厂
-	* dear_H
- 	*/
 	export class PlatformFactory
 	{
 		public constructor()
