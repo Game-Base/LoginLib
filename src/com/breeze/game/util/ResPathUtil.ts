@@ -11,7 +11,7 @@ module qmr
 		/** 地图资源路径 */
 		public static getMapUrl(mapName: string)
 		{
-			return SystemPath.mapPath + mapName + ".jpg";
+			return SystemPath.mapPath + mapName;
 		}
 	}
 }

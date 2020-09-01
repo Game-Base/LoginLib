@@ -46,9 +46,11 @@ module qmr {
 			let dic: Dictionary = new Dictionary();
 			let className: string = fileName.charAt(0).toLocaleUpperCase() + fileName.slice(1, fileName.length) + "Cfg";//转换为类名
 			let greeter: any = qmr[className];
-			let zip = t.getZip(t.WHOLE_CONFIG_NAME);
-			if(!zip) {
+			let zip;
+			if(fileName == ConfigEnumBase.MUSIC || fileName == ConfigEnumBase.PLAYERNAME || fileName == ConfigEnumBase.CODECFG || fileName == ConfigEnumBase.CLIENTCN){
 				zip = t.getZip(t.BASE_CONFIG_NAME);
+			} else {
+				zip = t.getZip(t.WHOLE_CONFIG_NAME);
 			}
 			if(!zip) {
 				console.error("配置读取失败");
